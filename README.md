@@ -5,11 +5,11 @@ The notebook focuses on prompt-based image synthesis through the pre-built Stabl
 
 ## Project Overview
 
-A complete inference pipeline was created to:
+The notebook covers the following steps:
 - Load the pre-trained Stable Diffusion model from Hugging Face.
-- Generate images conditioned by a text prompt using the `StableDiffusionPipeline`.
-- Adjust parameters such as inference steps, image dimensions, and guidance scale.
-- Display the generated images in the notebook environment.
+- Define a custom text prompt.
+- Generate an image based on the prompt using the `StableDiffusionPipeline`.
+- Display the resulting image within the notebook interface.
 
 ## Technologies Used
 
@@ -23,11 +23,9 @@ A complete inference pipeline was created to:
 
 Stable_Diffusion/
 
-┣ stable_diffusion_pipeline.ipynb
+┣ dreambooth_kawaii.ipynb
 
-┣ stable_diffusion_pipeline.ipynb
-
-┣ outputs/
+┣ Kawaii Generated/
 
 ┣ README.md
 
@@ -38,21 +36,23 @@ Stable_Diffusion/
 1. Clone this repository:
    
      git clone https://github.com/LordAmadeus1/Stable_Diffusion.git
+   
      cd Stable_Diffusion
    
-2. Install the required dependencies:
+3. Install the required dependencies:
 
    pip install -r requirements.txt
 
 
-3. Open the notebook:
+4. Open the notebook:
    
-- Launch `stable_diffusion_pipeline.ipynb` in Google Colab or a local Jupyter environment.
-- Run each cell sequentially to load the model and generate images based on your selected prompt.
+- Launch `dreambooth_kawaii.ipynb` in Google Colab or a local Jupyter environment.
+- Enter your custom text prompt when requested.
+- Run the remaining cells to generate and view the corresponding image.
 
 ## Results
 
 The notebook successfully generates images from text prompts using the official Stable Diffusion pipeline.  
-It allows simple adjustments to inference parameters and saves the final images in the `/outputs/` directory.
+Users can easily modify the input prompt to experiment with different image generations.
 
-The implementation can be extended by integrating alternative schedulers, adding negative prompts, or customizing the sampling loop.
+Possible future extensions include adding negative prompts, adjusting inference steps and integrating alternative schedulers.
